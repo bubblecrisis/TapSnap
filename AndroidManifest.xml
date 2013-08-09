@@ -5,22 +5,33 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
-
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc" />
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="nabhack.tapsnap.DealOfTheDayActivity"
-            android:label="@string/app_name" >
+            android:name="nabhack.tapsnap.activity.DealOfTheDayActivity_"
+            android:label="Deal of the day" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="nabhack.tapsnap.activity.DealDetailsActivity_"
+            android:label="@string/title_activity_deal_details" >
+        </activity>
+        <activity
+            android:name="nabhack.tapsnap.activity.ShareActivity_"
+            android:label="@string/title_activity_share" >
         </activity>
     </application>
 
